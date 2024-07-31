@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:DistanciaPuntos5363922.ViewModels"
+             x:Class="DistanciaPuntos5363922.MainPage"
+             BackgroundColor="Black">
+
+    <ContentPage.BindingContext>
+        <viewmodel:MainViewModel/>
+    </ContentPage.BindingContext>
+    
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+
+            <Label
+     Text="Distancia entre dos puntos"
+     FontAttributes="Bold"
+     FontFamily="Cambria"
+     FontSize="25"
+     TextColor="Gainsboro"
+     VerticalTextAlignment="Center"
+     HorizontalTextAlignment="Center"/>
+
+            <Label
+     Text="Digite la primera variable"
+     FontFamily="Arial Black"
+     FontSize="14"
+     VerticalTextAlignment="Center"
+     HorizontalTextAlignment="Center"/>
+
+            <Entry
+   Text="{Binding X1}"
+   WidthRequest="200"
+   Placeholder="Ingrese el valor de X"
+   PlaceholderColor="LightGray"/>
+
+            <Label
+     Text="Digite la segunda variable"
+     FontFamily="Arial Black"
+     FontSize="14"
+     VerticalTextAlignment="Center"
+     HorizontalTextAlignment="Center"/>
+
+            <Entry
+    Text="{Binding X2}"
+    WidthRequest="200"
+   Placeholder="Ingrese el valor de X"
+  PlaceholderColor="LightGray"/>
+
+            <Label
+     Text="Digite la tercera variable"
+     FontFamily="Arial Black"
+     FontSize="14"
+     VerticalTextAlignment="Center"
+     HorizontalTextAlignment="Center"/>
+
+            <Entry
+    Text="{Binding Y1}"
+    WidthRequest="200"
+   Placeholder="Ingrese el valor de Y"
+  PlaceholderColor="LightGray"/>
+
+            <Label
+     Text="Digite la cuarta variable"
+     FontFamily="Arial Black"
+     FontSize="14"
+     VerticalTextAlignment="Center"
+     HorizontalTextAlignment="Center"/>
+
+            <Entry
+    Text="{Binding Y2}"
+    WidthRequest="200"
+   Placeholder="Ingrese el valor de Y"
+  PlaceholderColor="LightGray"/>
+
+
+
+            <Button
+     BackgroundColor="BlueViolet"
+     TextColor="White"
+     Text="Calcular Area"
+     x:Name="Suma"
+      WidthRequest="200"
+     Command="{Binding CalculoCommand}"/>
+
+
+            <Label
+     Text="El resultado es: "
+     FontFamily="Arial Black"
+     FontSize="14"
+     VerticalTextAlignment="Center"
+     HorizontalTextAlignment="Center"/>
+
+            <Entry
+     Text="{Binding Total}"
+      WidthRequest="300"/>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
